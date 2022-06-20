@@ -49,8 +49,8 @@ figure(11)
 hold off
 set(gca,'FontName','Arial','FontSize',14)
 title('CW','FontName','Arial','FontSize',16)
-xlabel('$$t$$ [s]', 'interpreter', 'latex','fontsize',18)
-ylabel('$$\theta(t)$$ [deg]', 'interpreter', 'latex','fontsize',18)
+xlabel('$$t$$ [s]', 'interpreter', 'latex','FontSize',18)
+ylabel('$$\theta(t)$$ [deg]', 'interpreter', 'latex','FontSize',18)
 grid on
 ylim([0 360*14])
 set(gca,'XTick',0:0.2:2)
@@ -61,8 +61,8 @@ figure(12)
 hold off
 set(gca,'FontName','Arial','FontSize',14)
 title('CW','FontName','Arial','FontSize',16)
-xlabel('$$t$$ [s]', 'interpreter', 'latex','fontsize',18)
-ylabel('$$\omega(t)=\dot{\theta}(t)$$ [deg/s]', 'interpreter', 'latex','fontsize',18)
+xlabel('$$t$$ [s]', 'interpreter', 'latex','FontSize',18)
+ylabel('$$\omega(t)=\dot{\theta}(t)$$ [deg/s]', 'interpreter', 'latex','FontSize',18)
 grid on
 ylim([0 360*8])
 set(gca,'XTick',0:0.2:2)
@@ -86,8 +86,8 @@ end
 figure(21)
 hold off
 set(gca,'FontName','Arial','FontSize',14)
-xlabel('$$t$$ [s]', 'interpreter', 'latex','fontsize',18)
-ylabel('$$\theta(t)$$ [deg]', 'interpreter', 'latex','fontsize',18)
+xlabel('$$t$$ [s]', 'interpreter', 'latex','FontSize',18)
+ylabel('$$\theta(t)$$ [deg]', 'interpreter', 'latex','FontSize',18)
 grid on
 ylim([-360*14 0])
 title('ACW','FontName','Arial','FontSize',16)
@@ -98,8 +98,8 @@ xtickangle(0)
 figure(22)
 hold off
 set(gca,'FontName','Arial','FontSize',14)
-xlabel('$$t$$ [s]', 'interpreter', 'latex','fontsize',18)
-ylabel('$$\omega(t)=\dot{\theta}(t)$$ [deg/s]', 'interpreter', 'latex','fontsize',18)
+xlabel('$$t$$ [s]', 'interpreter', 'latex','FontSize',18)
+ylabel('$$\omega(t)=\dot{\theta}(t)$$ [deg/s]', 'interpreter', 'latex','FontSize',18)
 grid on
 ylim([-360*8 0])
 title('ACW','FontName','Arial','FontSize',16)
@@ -111,14 +111,14 @@ xtickangle(0)
 load data1/data1_pwm_dy
 
 figure(31)
-plot(d1/255*100,cnt_to_deg*d2,'o-','LineWidth',1.5)
+plot(d1,cnt_to_deg*d2,'o-','LineWidth',1.5)
 set(gca,'FontName','Arial','FontSize',14)
-xlabel('Duty Ratio [\%]', 'interpreter', 'latex','fontsize',18)
-ylabel('$${\omega}_{\infty} = \lim_{t \rightarrow \infty}\omega(t)$$ [deg/s]', 'interpreter', 'latex','fontsize',18)
+xlabel('pwm', 'interpreter', 'latex','FontSize',18)
+ylabel('$${\omega}_{\infty} = \lim_{t \rightarrow \infty}\omega(t)$$ [deg/s]', 'interpreter', 'latex','FontSize',18)
 grid on
-xlim([-100 100])
+xlim([-255 255])
 ylim([-360*8 360*8])
-set(gca,'XTick',-100:20:100)
+set(gca,'XTick',-255:51:255)
 set(gca,'YTick',-360*8:360*2:360*8)
 xtickangle(0)
 
